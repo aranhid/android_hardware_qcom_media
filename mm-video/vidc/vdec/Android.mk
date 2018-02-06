@@ -61,21 +61,21 @@ LOCAL_PATH:= $(ROOT_DIR)
 
 libmm-vdec-inc          := $(LOCAL_PATH)/inc
 libmm-vdec-inc          += $(OMX_VIDEO_PATH)/vidc/common/inc
-libmm-vdec-inc          += $(call project-path-for,qcom-media)/mm-core/inc
+libmm-vdec-inc          += $(QCOM_MEDIA_ROOT)/mm-core/inc
 libmm-vdec-inc          += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
-libmm-vdec-inc          += $(call project-path-for,qcom-display)/libgralloc
+libmm-vdec-inc          += $(QCOM_DISPLAY_ROOT)/libgralloc
 libmm-vdec-inc          += frameworks/native/include/media/openmax
 libmm-vdec-inc          += frameworks/native/include/media/hardware
 libmm-vdec-inc          += frameworks/native/libs/nativewindow/include
 libmm-vdec-inc          += frameworks/native/libs/arect/include
 libmm-vdec-inc          += frameworks/native/libs/nativebase/include
-libmm-vdec-inc          += $(call project-path-for,qcom-media)/libc2dcolorconvert
-libmm-vdec-inc          += $(call project-path-for,qcom-display)/libcopybit
+libmm-vdec-inc          += $(QCOM_MEDIA_ROOT)/libc2dcolorconvert
+libmm-vdec-inc          += $(QCOM_DISPLAY_ROOT)/libcopybit
 libmm-vdec-inc          += frameworks/av/include/media/stagefright
-libmm-vdec-inc          += $(call project-path-for,qcom-display)/libqservice
+libmm-vdec-inc          += $(QCOM_DISPLAY_ROOT)/libqservice
 libmm-vdec-inc          += frameworks/av/media/libmediaplayerservice
 libmm-vdec-inc          += frameworks/native/include/binder
-libmm-vdec-inc          += $(call project-path-for,qcom-display)/libqdutils
+libmm-vdec-inc          += $(QCOM_DISPLAY_ROOT)/libqdutils
 
 
 LOCAL_MODULE                    := libOmxVdec
@@ -109,7 +109,7 @@ include $(BUILD_SHARED_LIBRARY)
 # ---------------------------------------------------------------------------------
 include $(CLEAR_VARS)
 
-mm-vdec-test-inc    := $(call project-path-for,qcom-media)/mm-core/inc
+mm-vdec-test-inc    := $(QCOM_MEDIA_ROOT)/mm-core/inc
 mm-vdec-test-inc    += $(LOCAL_PATH)/inc
 mm-vdec-test-inc    += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
 
@@ -132,7 +132,7 @@ include $(BUILD_EXECUTABLE)
 # ---------------------------------------------------------------------------------
 include $(CLEAR_VARS)
 
-mm-vdec-drv-test-inc    := $(call project-path-for,qcom-media)/mm-core/inc
+mm-vdec-drv-test-inc    := $(QCOM_MEDIA_ROOT)/mm-core/inc
 mm-vdec-drv-test-inc    += $(LOCAL_PATH)/inc
 mm-vdec-drv-test-inc    += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
 

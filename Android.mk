@@ -1,9 +1,6 @@
-ifeq ($(call my-dir),$(call project-path-for,qcom-media))
+ifeq ($(TARGET_QCOM_AUDIO_VARIANT),caf-msm8960)
 
-ifneq ($(filter msm8960,$(TARGET_BOARD_PLATFORM)),)
-
+QCOM_MEDIA_ROOT := $(call my-dir)
 include $(call all-subdir-makefiles)
-
-endif
 
 endif
